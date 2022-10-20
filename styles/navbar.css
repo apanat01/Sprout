@@ -4,6 +4,7 @@ ul, li {
 }
 
 nav {
+  list-style: none;
   padding: 24px 20px;
 }
 
@@ -35,15 +36,16 @@ nav {
     order: 1;
   }
 
+  .navBarItem.displayed  {
+    display: block;
+    width: 100%;
+  }
+
   .navBarItem {
     display: none;
     order: 2;
   }
-
-  .displayed .navBarItem {
-    display: block;
-    width: 100%;
-  }
+  
 }
 
 @media all and (min-width: 600px) {

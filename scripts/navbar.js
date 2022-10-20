@@ -4,16 +4,16 @@ const menuToggle = document.getElementById("menuToggle");
 // Open and close the mobile navbar menu
 function mobileMenuController() {
   // Get navbar menu element
-  const menu = document.getElementById("navBarMenu");
+  const navBarItems = document.getElementsByClassName("navBarItem");
   
   // Open and close the menu based on menu display status
-  if (menu.classList.contains("displayed")) {
+  if (navBarItems[0].classList.contains("displayed")) {
     // Hide navbar items
-    menu.classList.remove("displayed");
+    Array.from(navBarItems).forEach((item) => item.classList.remove("displayed"));
     menuToggle.querySelector("a").innerHTML = '<img src="media/icons/menu.svg"/>';
   } else {
     // Display navbar items
-    menu.classList.add("displayed");
+    Array.from(navBarItems).forEach((item) => item.classList.add("displayed"))
     menuToggle.querySelector("a").innerHTML = '<img src="media/icons/x.svg"/>';
   }
 }
