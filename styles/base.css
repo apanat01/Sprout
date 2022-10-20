@@ -12,22 +12,24 @@
   --body-font: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4, h5, body, a {
+h1, h2, h3, h4, h5, body, a, p {
   color: var(--greenDark);
   line-height: 150%;
+  margin: 0;
 }
 
-h1, h2, h3, a {
+h1, h2, h3 {
   font-family: var(--header-font);
 }
 
-h4, h5, body {
+h4, h5, body, p, a {
   font-family: var(--body-font);
 }
 
 h1 {
   font-size: 45px;
   font-weight: 700;
+  margin: 20px 0px;
 }
 
 h2 {
@@ -40,6 +42,7 @@ h3 {
 }
 
 h4 {
+  font-weight: 400;
   font-size: 20px;
 }
 

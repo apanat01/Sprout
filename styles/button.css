@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.filled {
+  color: white;
+  background-color: var(--greenPrimary);
+}
+
+.outlined {
+  color: var(--greenPrimary);
+  background-color: white;
+  border: 1px solid var(--greenPrimary);
+}
+
+.large {
+  padding: 16px 40px;
+}
+
+.small {
+  padding: 12px 20px;
+}

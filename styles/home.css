@@ -1,0 +1,71 @@
+.hero {
+  position: relative;
+  background: url(../media/home/hero.jpeg);
+  background-size: cover;
+  background-position: left;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  gap: 60px 0px;
+}
+
+.section {
+  margin: 130px auto 0px auto;
+}
+
+.sectionContent {
+  max-width: 1000px;
+  margin: auto;
+}
+
+#bestSellersHeader {
+  display: flex;
+  gap: 24px;
+  align-content: center;
+}
+
+#mission {
+  background-color: var(--mintLight);
+  padding: 100px 0px;
+}
+
+#missionContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+#visitUsContent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+  min-width: 300px;
+}
+
+#visitUsImg {
+  flex-basis: 50%;
+  align-items: end;
+}
+
+#visitUsDesc {
+  gap: 20px;
+}
+
+.locationInfo {
+  display: flex;
+  gap: 12px;
+}
