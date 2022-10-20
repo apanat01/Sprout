@@ -37,3 +37,11 @@
 .small {
   padding: 12px 20px;
 }
+
+a:hover {
+  color: var(--greenLight);
+}
+
+a:active {
+  color: var(--greenDark);
+}
