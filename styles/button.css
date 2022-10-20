@@ -8,10 +8,26 @@
   background-color: var(--greenPrimary);
 }
 
+.filled:hover {
+  background-color: var(--greenLight);
+}
+
+.filled:active {
+  background-color: var(--greenDark);
+}
+
 .outlined {
   color: var(--greenPrimary);
   background-color: white;
   border: 1px solid var(--greenPrimary);
+}
+
+.outlined:hover {
+  background-color: var(--mintLight);
+}
+
+.outlined:active {
+  background-color: var(--mintPrimary);
 }
 
 .large {
