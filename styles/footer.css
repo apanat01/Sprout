@@ -43,6 +43,15 @@
   color: white;
 }
 
+
+.footerLink:hover {
+  color: var(--mintPrimary);
+}
+
+.footerLink:active {
+  color: var(--mintDark);
+}
+
 .footerLinkGroup {
   display: flex;
   flex-direction: column;
