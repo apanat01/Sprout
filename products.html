@@ -6,20 +6,13 @@
     <link rel="stylesheet" type="text/css" href="styles/footer.css"/>
     <link rel="stylesheet" type="text/css" href="styles/button.css"/>
     <link rel="stylesheet" type="text/css" href="styles/products.css"/>
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script language="javascript">
+      $('document').ready(function () {
+        populateProducts();
+      });
+    </script>
     <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        padding: 8%;
-        padding-top: 3%;
-      }
-
-      .grid-item {
-        padding: 20px;
-        font-size: 20px;
-        text-align: center;
-      }
-
       @media only screen {
         .grid-container {
           grid-template-columns: auto;
@@ -36,17 +29,6 @@
         .grid-container {
           grid-template-columns: auto auto auto;
         }
-      }
-
-      .grid-item > img {
-        min-height: 100px;
-        width: 100%;
-        object-fit: cover;
-      }
-
-      .product-name {
-        padding: 10px;
-        font-size: 14px;
       }
     </style>
   </head>
@@ -65,43 +47,26 @@
         <a class="btn large" href="storeLocations.html">See Locations</a>
       </div>
     </header>
-    <div class="grid-container" id="products">
-      <div class="grid-item" id="product1">
-        <img src="media/products/plant1.jpg" alt="Ginseng Ficus Bonsai Tree"><br>
-        <p class="product-name">Ginseng Ficus Bonsai Tree</p>
-      </div>
-      <div class="grid-item" id="product2">
-        <img src="media/products/plant2.jpg" alt="Bird of Paradise"><br>
-        <p class="product-name">Bird of Paradise</p>
-      </div>
-      <div class="grid-item" id="product3">
-        <img src="media/products/plant3.jpg" alt="Haworthia Succulent"><br>
-        <p class="product-name">Haworthia Succulent</p>
-      </div>
-      <div class="grid-item" id="product4">
-        <img src="media/products/plant4.jpg" alt="Fiddle Leaf Fig"><br>
-        <p class="product-name">Fiddle Leaf Fig</p>
-      </div>
-      <div class="grid-item" id="product5">
-        <img src="media/products/plant5.jpg" alt="Peace Lily"><br>
-        <p class="product-name">Peace Lily</p>
-      </div>
-      <div class="grid-item" id="product6">
-        <img src="media/products/plant6.jpg" alt="Golden Pothos"><br>
-        <p class="product-name">Golden Pothos</p>
-      </div>
-      <div class="grid-item" id="product7">
-        <img src="media/products/plant7.jpg" alt="Snake Plant"><br>
-        <p class="product-name">Snake Plant</p>
-      </div>
-      <div class="grid-item" id="product8">
-        <img src="media/products/plant8.jpg" alt="Aloe Vera"><br>
-        <p class="product-name">Aloe Vera</p>
-      </div>
-      <div class="grid-item" id="product9">
-        <img src="media/products/plant9.jpg" alt="Jade Plant"><br>
-        <p class="product-name">Jade Plant</p>
-      </div>
-    </div>
+
+    <div class="grid-container" id="products"></div>
+
+    <script>
+      function populateProducts() {
+        let names = ["Ginseng Ficus Bonsai Tree", "Bird of Paradise", "Haworthia Succulent",
+                    "Fiddle Leaf Fig", "Peace Lily", "Golden Pothos",
+                    "Snake Plant", "Aloe Vera", "Jade Plant"];
+
+        for (let i = 1; i <= 9; i++) {
+          let name = names[i-1];
+          let imagePath = "media/products/plant" + i + ".jpg";
+          let imageTag = "<img src='" + imagePath + "' alt = '" + name + "'><br>";
+          let nameTag = "<p class='product-name'>" + name + "</p>";
+
+          let productDiv = "<div class='grid-item'>" + imageTag + nameTag + "</div>";
+
+          $('.grid-container').append(productDiv);
+        }
+      }
+    </script>
   </body>
 </html>
