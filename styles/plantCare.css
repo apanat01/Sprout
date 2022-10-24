@@ -1,0 +1,41 @@
+header {
+    margin: 0%;
+}
+
+
+.header-child {
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+
+    font-family: 'Domine';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 21px;
+    text-align: center;
+}
+
+.steps {
+    margin-left: 15%;
+    margin-right: 15%;
+    flex: 1.5;
+}
+
+.contentimage1 {
+    padding-left: 260px;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #EBF4EB;
+    width: 320px;
+    padding: 20px;
+    margin: 10px;
+}
