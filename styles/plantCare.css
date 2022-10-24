@@ -4,7 +4,6 @@ header {
 
 
 .header-child {
-
     max-width: 1000px;
     margin: auto;
 
@@ -22,9 +21,6 @@ header {
     flex: 1.5;
 }
 
-.contentimage1 {
-    /*padding-left: 260px;*/
-}
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -43,4 +39,5 @@ header {
     display: flex;
     flex-flow: row wrap;
     gap: 10px;
+    padding: 20px;
 }
