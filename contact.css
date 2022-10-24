@@ -34,7 +34,7 @@
   flex: 1.5;
 }
 @media screen and (max-width: 600px) {
-  body {
+  .content {
     margin-left: 5%;
     margin-right: 5%;
   }
