@@ -18,12 +18,8 @@ nav {
   align-items: center;
 }
 
-.logo {
-  padding: 10px 0px;
-}
-
 .navBarItem {
-  padding: 24px;
+  padding: 16px 24px;
 }
 
 @media all and (min-width: 370px) {
