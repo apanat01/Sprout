@@ -1,0 +1,26 @@
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+    flex: 1.5;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #EBF4EB;
+    width: 320px;
+    padding: 20px;
+    margin: 10px;
+}
+.flex-item p:first-child {
+    font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+    .content {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
