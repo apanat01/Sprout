@@ -1,0 +1,41 @@
+.horizontal_elements {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.form_element {
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
+}
+.formbtn {
+  line-height: 150%;
+  margin: 0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  margin-top: 28px;
+}
+.text_input {
+  font-family: 'Inter', sans-serif;
+  line-height: 150%;
+  padding: 12px;
+}
+.short {
+  width: 300px;
+  min-width: 200px;
+  max-height: 45px;
+}
+.content {
+  margin-left: 15%;
+  margin-right: 15%;
+  max-width: 620px;
+  flex: 1.5;
+}
+@media screen and (max-width: 600px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

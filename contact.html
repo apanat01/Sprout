@@ -1,10 +1,149 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/base.css"/>
     <link rel="stylesheet" type="text/css" href="styles/navBar.css"/>
     <link rel="stylesheet" type="text/css" href="styles/footer.css"/>
     <link rel="stylesheet" type="text/css" href="styles/button.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/contact.css"/>
   </head>
-  <body></body>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <ul id="navBarMenu" class="navBarMenu">
+        <li class="logo">
+          <a href="index.html">
+            <img src="media/Logo Placeholder.svg" alt="logo" height="45" width="auto" />
+          </a>
+        </li>
+        <li class="navBarItem">
+          <a href="products.html">Products</a>
+        </li>
+        <li class="navBarItem">
+          <a href="plantCare.html">Plant Care</a>
+        </li>
+        <li class="navBarItem">
+          <a href="about.html">About</a>
+        </li>
+        <li class="navBarItem">
+          <a href="contact.html">Contact</a>
+        </li>
+        <li id="menuToggle" class="menuToggle">
+          <a href="#">
+            <img src="media/icons/menu.svg"/>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class = "content">
+    <!-- beginning of page content -->
+    <h1>Contact Us</h1>
+    <p id = "form_description">From questions about our products to suggestions on how to do better, or just
+       to say hi, feel free to drop us a message!</p>
+    
+    <div id = "confirmation">
+      <p>Your message has been sent! We will try to get back to you as soon as possible.</p>
+      <a class="btn filled small formbtn" href="index.html">Back to home</a>
+    </div>
+    
+    <form action="">
+      <!-- name, email, and message fields -->
+      <div class="horizontal_elements">
+        <div class="form_element">
+          <label>Name</label>
+          <input type="text" class = "short text_input" name="name" placeholder="Enter your name">
+        </div>
+        <div class="form_element">
+          <label>Email Address</label>
+          <input type="text" class = "short text_input" name="email" placeholder="Enter your email address">
+        </div>
+      </div>
+      <div class="form_element">
+        <label>Message</label>
+      <textarea name="message" class = "text_input" rows="10" placeholder="Enter your message"></textarea>
+      </div>
+      <input type="button" class = "btn filled small formbtn" id="submit_btn" value="Submit">
+
+      <!-- javascript for form -->
+      <script>
+        // ON LOAD
+        $(document).ready(function(){
+          // hide 'back to home button' and confirmation text
+          $('#confirmation').hide();
+        })
+
+        // ON SUBMIT
+        $('#submit_btn').click(function(){
+          // validate form responses
+          valid = true;
+          validate();
+
+          if (valid) {
+            // hide form and the text above it
+            $('form').hide();
+            $('#form_description').hide();
+          
+            // show 'back to home' button and submit confirmation text
+            $('#confirmation').show();
+          }
+        });
+        
+	      // input: none, output: alert if a field was not entered, return: none
+	      function validate() {
+		      // verify that name was entered
+          if($('input:text[name="name"]').val() == "") {
+			      valid = false;
+			      alert("Please enter your name to proceed.");
+            return;
+		      }
+          // verify that email was entered
+          if($('input:text[name="email"]').val() == "") {
+			      valid = false;
+			      alert("Please enter your email to proceed.");
+            return;
+		      }
+          // verify that message was entered
+          if($('textarea[name="message"]').val() == "" || $('textarea[name="email"]').val() == " ") {
+			      valid = false;
+			      alert("Please enter a message to proceed.");
+            return;
+		      }
+	      }
+      </script>
+    </form>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer">
+      <div class="sectionContent">
+        <div id="footerContent">
+          <div class="footerLogo">
+            <a href="index.html">
+              <img src="media/Logo Placeholder.svg" alt="logo" height="45" width="auto" />
+            </a>
+          </div>
+          <div class="footerLinks">
+            <div class="footerLinkGroup">
+              <h5 class="footerLinkHeader">Company</h5>
+              <a class="footerLink" href="about.html">About</a>
+              <a class="footerLink" href="storeLocations.html">Store Locations</a>
+            </div>
+            <div class="footerLinkGroup">
+              <h5 class="footerLinkHeader">Support</h5>
+              <a class="footerLink" href="faq.html">FAQ</a>
+              <a class="footerLink" href="contact.html">Contact Us</a>
+            </div>
+            <div class="footerLinkGroup">
+              <h5 class="footerLinkHeader">Resources</h5>
+              <a class="footerLink" href="plantCare.html">Plant Care</a>
+            </div>
+          </div>
+        </div>
+        <p id="copyright">Sprout, Inc. Copyright 2022</p>
+      </div>
+    </div>
+
+  </body>
 </html>
