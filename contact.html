@@ -60,9 +60,25 @@
           <input type="text" class = "short text_input" name="email" placeholder="Enter your email address">
         </div>
       </div>
+      <div id = "radio_input">
+        <p>What is your message about?</p>
+        <input type="radio" id="returns" name="message_reason" value= "returns">
+        <label for="returns">Returns</label><br>
+        <input type="radio" id="plantcare" name="message_reason" value= "plantcare">
+        <label for="plantcare">Plant care</label><br>
+        <input type="radio" id="storeinfo" name="message_reason" value= "storeinfo">
+        <label for="storeinfo">Store information</label><br>
+        <input type="radio" id="other" name="message_reason" value= "other">
+        <label for="other">Other</label>
+      </div>
       <div class="form_element">
         <label>Message</label>
-      <textarea name="message" class = "text_input" rows="10" placeholder="Enter your message"></textarea>
+      <textarea name="message" class = "text_input" rows = "8" placeholder="Enter your message"></textarea>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" id = "signup_checkbox" name = "checkbox" value = "sign_up">
+        <label for="checkbox">Sign up to receive monthly news and deals</label><br>
       </div>
       <input type="button" class = "btn filled small formbtn" id="submit_btn" value="Submit">
 
